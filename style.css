@@ -38,9 +38,14 @@ body {
 .padded-2  { padding: 2rem; }
 
 .padded-t-2 {padding-top: 2rem;}
+.padded-t-3 {padding-top: 3rem;}
 .padded-b-2 {padding-bottom: 2rem;}
+.padded-b-1 {padding-bottom: 1rem;}
 
 .margin-b-0 {margin-bottom: 0;}
+.margin-l {margin-left: 0.5rem; }
+
+.nav-padded {padding: 0.6rem 1rem;}
 
 .right {text-align: right;}
 .center {text-align: center;}
@@ -61,6 +66,7 @@ body {
     font-family: 'Martel', serif;
     font-weight: 200;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'GFS Didot', serif;
     font-weight: normal;
@@ -83,10 +89,24 @@ h2 {
     }
 h3 {font-size: 2.5rem;}
 p {font-weight: 200;}
+p:last-child {margin-bottom: 0;}
 a {
     color: inherit;
     text-decoration: none;
 }
+a {
+    display: inline-block;
+    color: inherit;
+}
+nav a { 
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.social a {padding: 0.2rem;}
+
+a:hover {color: #3a768b;}
+
 .menu p {
     font-size: 0.9rem;
     margin-top: 0.5rem;
@@ -112,6 +132,49 @@ background-size: cover;
     font-weight: 400;
     text-align: right;
 }
+.button {
+    padding: 0.2rem;
+    color: white;
+    margin: 0.1rem;
+}
+.button:hover {
+color: white;
+border-bottom: 1px solid white;}
+
+/* About Page */
+
+/* Gallery Images */
+
+.bg-gallery-1 {
+    background-image: url('/images/bg-gallery-1.jpg');
+    background-position: 50% 70%;
+}
+.bg-gallery-2 {background-image: url('/images/bg-gallery-3.jpg');}
+.bg-gallery-3 {background-image: url('/images/bg-g-2.jpg');}
+.bg-gallery-4 {background-image: url('/images/bg-gallery-6.jpg');}
+.bg-gallery-negroni {background-image: url('/images/bg-g-1.jpg');}
+.negroni-5 {
+    background-image: url('/images/bg-gallery-5.jpg');
+    background-position: 80% 50%;
+}
+.bg-story {
+    background-image: url('/images/bg-gallery-4.jpg');
+background-position: 50% 50%;
+}
+
+.gallery [class*="col-"] {padding: 1%;}
+
+
+/* Aspect Ratio  */
+.portrait-tall {padding-bottom: 175%;}
+.portrait {padding-bottom: 125%;}
+.square {padding-bottom: 100%;}
+.landscape {padding-bottom: 66%;}
+.landscape-wide {padding-bottom: 56%;}
+.custom-portr {padding-bottom: 117%;}
+
+.bg-pos-b {background-position: bottom;}
+
 /* Head & Footer */
 footer {
     padding: 5%;
@@ -124,6 +187,7 @@ footer h2 {margin-bottom: 0.5rem;}
     opacity: 0.7;
     font-size: 0.8rem;
 }
+
 /* SM - 48em - mob. */
 @media(max-width: 48em) {
     .mob-padded-t-0 {padding-top: 0;}
@@ -132,9 +196,15 @@ footer h2 {margin-bottom: 0.5rem;}
     h1 {font-size: 6rem;}
     h1 span {font-size: 2rem;}
     footer a {font-size: 1rem;}
+    .mob-hide {display: none;}
+    nav a {font-size: 1rem;}
+    h2 {font-size: 1.5rem;}
+    .gallery {padding: 2%;}
+    .gallery [class*="col-"] {padding: 2%;}
 }
 /* Custom size XXS */
 @media(max-width: 25em) {
     h1 {font-size: 4.5rem;}
     h1 span {font-size: 1.5rem;}
+    nav a {font-size: 0.8rem;}
 }

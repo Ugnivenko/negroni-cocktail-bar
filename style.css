@@ -33,6 +33,7 @@ body {
 .tall-80 { min-height: 80vh; }
 .tall-90 { min-height: 90vh; }
 
+.padded-0 { padding: 0;}
 .padded    { padding: 5%;   }
 .padded-1  { padding: 1rem; }
 .padded-2  { padding: 2rem; }
@@ -43,18 +44,20 @@ body {
 .padded-b-1 {padding-bottom: 1rem;}
 
 .margin-b-0 {margin-bottom: 0;}
+.margin-b-1 {margin-bottom: 1rem;}
+.margin-t-1 { margin-top: 1rem;}
 .margin-l {margin-left: 0.5rem; }
 
 .nav-bar {
     padding: 0.5rem 0.5rem;
-    background-color: white;
+    /* background-color: white; */
     color: #183039;
 }
 
 .right {text-align: right;}
 .center {text-align: center;}
 
-.text-light {color: white;}
+.text-light {color: #dad3cd;}
 .text-featured {color: #183039;}
 
 .text-tight {line-height: 0.8;}
@@ -65,10 +68,20 @@ body {
 .bg-featured {background-color: #183039;}
 .bg-dark     {background-color: #24282B;}
 
+hr {
+    border: none;
+    border-bottom: 1px solid #183039; 
+    margin: auto;
+    width: 115px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
 /* General typography & universal styles  */
 body {
     font-family: 'Martel', serif;
     font-weight: 200;
+    color: rgb(60,60,60);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +105,8 @@ h2 span {
         line-height: 0.9;
     }
 h3 {font-size: 2.5rem;}
+
+.text-big { font-size: 2rem;}
 p {font-weight: 200;}
 p:last-child {margin-bottom: 0;}
 
@@ -103,13 +118,13 @@ a {
 
 nav a { 
     text-decoration: none;
-    font-size: 1rem;
-    color: #183039;
+    font-size: 1.2rem;
+    /* color: #183039; */
 }
 
 .social a {padding: 0.2rem;}
 
-a:hover {color: #3a768b;}
+.social a:hover {color: #3a768b;}
 
 .menu p {
     font-size: 0.9rem;
@@ -124,10 +139,39 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+.bg-interior { 
+background-image: url('/images/interior.jpg'); 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: #dad3cd;
+}
 .bg-glass {background-image: url('/images/negroni-glass-faded.jpg');}
 .bg-window {background-image: url('/images/negroni-2.jpg');}
 .bg-plant {background-image: url('/images/negroni-4.jpg');}
 .bg-water {background-image: url('/images/water-light.jpg');}
+
+/* Overlay Effect------- */
+.bg-overlay {
+    position: relative;
+  }
+  
+.bg-overlay::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.bg-overlay > * {
+    position: relative;
+  }
+.bg-overlay-gradient::before { 
+    background: linear-gradient(260deg, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  } 
 
 /* Unique Styles */  
 .price {
@@ -138,14 +182,14 @@ background-size: cover;
 }
 .button {
     padding: 0.2rem;
-    color: #183039;
+    color: rgb(218, 211, 205);
     margin: 0.1rem;
-    border-bottom: 1px solid rgb(24,48,57,0);
+    border-bottom: 1px solid rgb(218, 211, 205, 0);
 }
 .button:hover {
-color: #183039;
-border-bottom: 1px solid #183039;
-}
+    color: rgb(218, 211, 205);
+    border-bottom: 1px solid rgb(218, 211, 205);
+    }
 
 /* About Page */
 

@@ -1,0 +1,4 @@
+
+url: "the_sites_url_here.com"
+plugins:
+  - jekyll-sitemap
